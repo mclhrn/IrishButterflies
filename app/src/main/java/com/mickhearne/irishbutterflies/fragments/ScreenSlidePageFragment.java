@@ -37,19 +37,26 @@ public class ScreenSlidePageFragment extends Fragment {
      * The argument key for the page number this fragment represents.
      */
     public static final String ARG_PAGE = "page";
+    public static final String ARG_NAME = "name";
 
     /**
-     * The fragment's page number, which is set to the argument value for {@link #ARG_PAGE}.
+     * The fragment's page name, which is set to the argument value for {@link #ARG_PAGE}.
      */
     private String name;
 
     /**
+     * The fragment's page number, which is set to the argument value for {@link #ARG_PAGE}.
+     */
+    private int mPageNumber;
+
+    /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
      */
-    public static ScreenSlidePageFragment newInstance(String name) {
+    public static ScreenSlidePageFragment newInstance(String name, int position) {
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PAGE, name);
+        args.putString(ARG_NAME, name);
+        args.putInt(ARG_PAGE, position);
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,7 +64,8 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        name = getArguments().getString(ARG_PAGE);
+        name = getArguments().getString(ARG_NAME);
+        mPageNumber = getArguments().getInt(ARG_PAGE);
     }
 
 
@@ -73,7 +81,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
         ImageView imageView = (ImageView) rootView.findViewById(R.id.slide_show_image);
 
-        int imageResource = getResources().getIdentifier(name,
+        int imageResource = getResources().getIdentifier(name + "_" + (mPageNumber + 1),
                 "drawable", getActivity().getPackageName());
         if (imageResource != 0) {
             imageView.setImageResource(imageResource);

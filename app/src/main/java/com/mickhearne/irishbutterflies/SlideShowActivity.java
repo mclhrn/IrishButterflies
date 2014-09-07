@@ -13,11 +13,15 @@ import android.view.View;
 
 import com.mickhearne.irishbutterflies.fragments.ScreenSlidePageFragment;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class SlideShowActivity extends FragmentActivity {
 
 
-    private static final int NUM_PAGES = 5;
+    private int NUM_PAGES = 1;
     private String name;
 
 
@@ -29,6 +33,11 @@ public class SlideShowActivity extends FragmentActivity {
         Bundle b = getIntent().getExtras();
         name = b.getString("name");
 
+        try {
+            getNumberofScreens();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
 
         // Instantiate a ViewPager and a PagerAdapter.
         ViewPager mPager = (ViewPager) findViewById(R.id.pager);
@@ -50,6 +59,18 @@ public class SlideShowActivity extends FragmentActivity {
     }
 
 
+    private void getNumberofScreens() throws IllegalAccessException {
+        Field[] fields = R.drawable.class.getFields();
+        List<Integer> drawables = new ArrayList<Integer>();
+        for (Field field : fields) {
+            if (field.getName().startsWith(name)) {
+                drawables.add(field.getInt(null));
+            }
+        }
+        NUM_PAGES = drawables.size();
+    }
+
+
     /**
      * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
      * sequence.
@@ -62,7 +83,7 @@ public class SlideShowActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return ScreenSlidePageFragment.newInstance(name + "_" + (position + 1));
+            return ScreenSlidePageFragment.newInstance(name, position);
         }
 
         @Override
@@ -113,26 +134,5 @@ public class SlideShowActivity extends FragmentActivity {
                 view.setAlpha(0);
             }
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.slide_show, menu);
-        return true;
-    }
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
