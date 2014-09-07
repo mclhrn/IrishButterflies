@@ -1,0 +1,136 @@
+{
+  "butterflies": [
+    {
+      "name": "Peacock",
+      "latin": "Inachis io",
+      "habitat": "Gardens, Woodlands, Hedgerows.",
+      "distribution": "Widespread in most of Ireland.",
+      "foodplant": "Nettles.",
+      "wingspan": "62-70mm (2.44 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "peacock_thumb",
+      "image_large": "peacock",
+      "description": "The Peacock is probably the most beautiful of all the Irish species and fortunately is widespread throughout most of Ireland.It has predominantly red wings with superbly coloured large eyespots.The underside is a very dark brown.It hibernates through the winter."
+    },
+    {
+      "name": "Small Tortoiseshell",
+      "latin": "Aglais urticae",
+      "habitat": "Most habitats - Gardens, Woodlands, Hedgerows.",
+      "distribution": "Widespread in Ireland.",
+      "foodplant": "Nettles.",
+      "wingspan": "50-55mm (2.44 inches)",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "small_tortoiseshell",
+      "description": "This is a very common butterfly which regularly frequents gardens, particularly favouring Buddlea bushes.It is mainly reddish-orange with black markings and blue spots around the border. In contrast, the underside is quite dull.It can be found sometimes hibernating in houses."
+    },
+    {
+      "name": "Painted Lady",
+      "latin": "Cynthia cardui",
+      "habitat": "Gardens, Woodlands.",
+      "distribution": "Mainly eastern and southern coastal areas.",
+      "foodplant": "Thistles.",
+      "wingspan": "65-70mm (2.37 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "painted_lady",
+      "description": "This migrant butterfly is somewhat like a dull version of theSmall Tortoiseshell.It is predominantly a dull orange with black markings and has a very colourful red, black and white underside.They do not survive the winter here."
+    },
+    {
+      "name": "Red Admiral",
+      "latin": "Vanessa atalanta",
+      "habitat": "Most Habitats - Gardens, Woodlands.",
+      "distribution": "Widespread.",
+      "foodplant": "Nettles.",
+      "wingspan": "65-70mm (2.37 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "red_admiral",
+      "description": "This rather large migrant is mainly dark brown with bright red stripes.The underside has colourful patterns.It is attracted to gardens where it feeds on buddlea, several other flowering species and also over-ripe fruit."
+    },
+    {
+      "name": "Silver-washed Fritillary",
+      "latin": "Argynnis paphia",
+      "habitat": "Woodlands.",
+      "distribution": "Scattered throughout Ireland, more common in southern regions.",
+      "foodplant": "Violet.",
+      "wingspan": "70-75mm (2.75 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "silver_washed_fritillary",
+      "description": "This butterfly is the largest of the fritillaries found in Ireland.ntttIt can be easily distinguished from theDark Green Fritillaryby its underside streaks of silver.The butterfly is found in woods and wooded hedgerows.The female has a slightly darker pattern than the male."
+    },
+    {
+      "name": "Dark Green Fritillary",
+      "latin": "Argynnis aglaja",
+      "habitat": "Mainly coastal areas and limestone grasslands.",
+      "distribution": "Along most of the coast of Ireland and also inland in the Burren.",
+      "foodplant": "Violet.",
+      "wingspan": "60-70mm (2.36 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "dark_green_fritillary",
+      "description": "The wing pattern is similar to that of theSilver-washed Fritillarybut the underside has spots rather than streaks.This fast flier is rather uncommon in Ireland, mainly restricted to costal regions."
+    },
+    {
+      "name": "Marsh Fritillary",
+      "latin": "Eurodryas aurinia",
+      "habitat": "Boglands.",
+      "distribution": "Uncommon - mainly central/west Ireland.",
+      "foodplant": "Devil's-bit Scabious.",
+      "wingspan": "42-48mm (1.65 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "marsh_fritillary",
+      "description": "This small Fritillary has a wing pattern that is darker and a little more colourful than the other Fritillaries.Due to the destruction of its boggy habitats, this uncommon species is endangered in many countries."
+    },
+    {
+      "name": "Pearl-bordered Fritillary",
+      "latin": "Clossiana euphrosyne",
+      "habitat": "Limestone regions.",
+      "distribution": "Rare. Only found in the Burren.",
+      "foodplant": "Dog violet.",
+      "wingspan": "45-50mm (1.77 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "pearl_bordered_fritillary",
+      "description": "The pattern on this small Fritillary is similar to that of theSilver-washed Fritillarythough it has a much more elaborate and colourful underside.Of all the butterfly species in Ireland this is the rarest, found only in the Burren region."
+    },
+    {
+      "name": "Comma",
+      "latin": "Polygonia c-album",
+      "habitat": "Woodlands, Gardens.",
+      "distribution": "Rare. Sightings in North and South-east coast.",
+      "foodplant": "Nettles.",
+      "wingspan": "44-48mm (1.73 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "comma",
+      "description": "There are only occassional sightings of this butterfly in Ireland, possible migrants from the UK.It looks somewhat like a dull,  ragged version of theSmall Tortoiseshell."
+    },
+    {
+      "name": "Holly Blue",
+      "latin": "Celastrina argiolus",
+      "habitat": "Woodlands, Gardens.",
+      "distribution": "Common in some Eastern and Southern Regions.",
+      "foodplant": "Holly, Ivy.",
+      "wingspan": "26-35mm (1.02 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "holly_blue",
+      "description": "The wings are predominantly pale blue, a border of black is present (more pronounced on the female).The underside is less colourful than that of theCommon Blue, with simple small black streaks."
+    },
+    {
+      "name": "Small Blue",
+      "latin": "Cupido minimus",
+      "habitat": "Coastal dunes, Limestone grasslands, Quarries.",
+      "distribution": "Quite rare. Found only in a few regions.",
+      "foodplant": "Kidney vetch.",
+      "wingspan": "20-28mm (0.79 inches)[Small Tortoiseshell 50mm]",
+      "flight_period": "",
+      "image_thumb": "_thumb",
+      "image_large": "small_blue",
+      "description": "This is the smallest Irish butterfly (some are only 20mm in wingspan).The wings are dark brown with the undersides somewhat similar to those of theHolly Blue.It is the rarest of the Blues, found only in a few scattered colonies in Ireland."
+    }
+    ]
+  }
