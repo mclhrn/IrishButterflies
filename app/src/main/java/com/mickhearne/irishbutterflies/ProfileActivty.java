@@ -89,9 +89,10 @@ public class ProfileActivty extends Activity implements
 
 
     @Override
-    public void onSlideshowSelected(String selection) {
+    public void onSlideshowSelected(String selection, String name) {
         Intent mIntent = new Intent(this, SlideShowActivity.class);
         mIntent.putExtra("name", selection);
+        mIntent.putExtra("title", name);
         startActivity(mIntent);
     }
 

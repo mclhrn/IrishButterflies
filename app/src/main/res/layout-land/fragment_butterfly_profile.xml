@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textIsSelectable="false"
-                    android:textSize="28sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textIsSelectable="false"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
             </LinearLayout>
         </LinearLayout>
@@ -89,15 +89,21 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/description_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
+
+
+
 
         <TextView
             android:id="@+id/identification_sub_head"
@@ -106,15 +112,21 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/habitat_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/habitat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
+
+
+
 
         <TextView
             android:id="@+id/diet_sub_head"
@@ -123,15 +135,20 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/food_plant_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/food_plant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
+
+
 
         <TextView
             android:id="@+id/breeding_sub_head"
@@ -140,15 +157,20 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/distribution_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/distribution"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
+
+
 
         <TextView
             android:id="@+id/wintering_habits_sub_head"
@@ -157,15 +179,18 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/flight_period_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/flight_period"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/where_to_see_sub_head"
@@ -174,15 +199,21 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:text="@string/wingspan_sub_head"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             android:id="@+id/wingspan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textIsSelectable="false"
-            android:textSize="14sp" />
+            android:textSize="15sp" />
+
+
+
 
         <TextView
             android:id="@+id/div_bar_4"

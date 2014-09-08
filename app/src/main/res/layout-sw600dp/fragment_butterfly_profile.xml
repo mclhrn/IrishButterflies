@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textIsSelectable="false"
-                    android:textSize="28sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/text"/>
 
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textIsSelectable="false"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textStyle="italic"
                     android:textColor="@color/text"/>
 
@@ -111,11 +111,15 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/description"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
 
 
         <TextView
@@ -124,11 +128,17 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/habitat"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
+
+
 
         <TextView
             style="@style/profile_sub_head"
@@ -136,11 +146,17 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/food_plant"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
+
+
 
         <TextView
             style="@style/profile_sub_head"
@@ -148,11 +164,17 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/distribution"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
+
+
 
         <TextView
             style="@style/profile_sub_head"
@@ -160,11 +182,17 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/flight_period"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
+
+
 
         <TextView
             style="@style/profile_sub_head"
@@ -172,11 +200,17 @@
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             android:id="@+id/wingspan"
             style="@style/profile_body_text"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"/>
+
+
+
 
         <TextView
             android:id="@+id/div_bar_4"

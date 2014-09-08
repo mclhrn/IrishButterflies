@@ -36,13 +36,21 @@ public class ScreenSlidePageFragment extends Fragment {
     /**
      * The argument key for the page number this fragment represents.
      */
+    public static final String ARG_TITLE = "title";
     public static final String ARG_PAGE = "page";
     public static final String ARG_NAME = "name";
 
     /**
-     * The fragment's page name, which is set to the argument value for {@link #ARG_PAGE}.
+     * The fragment's title, which is set to the argument value for {@link #ARG_TITLE}.
+     */
+    private String title;
+
+
+    /**
+     * The fragment's page name, which is set to the argument value for {@link #ARG_NAME}.
      */
     private String name;
+
 
     /**
      * The fragment's page number, which is set to the argument value for {@link #ARG_PAGE}.
@@ -52,10 +60,11 @@ public class ScreenSlidePageFragment extends Fragment {
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
      */
-    public static ScreenSlidePageFragment newInstance(String name, int position) {
+    public static ScreenSlidePageFragment newInstance(String imageName, int position, String title) {
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_NAME, name);
+        args.putString(ARG_NAME, imageName);
+        args.putString(ARG_TITLE, title);
         args.putInt(ARG_PAGE, position);
         fragment.setArguments(args);
         return fragment;
@@ -64,6 +73,7 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        title = getArguments().getString(ARG_TITLE);
         name = getArguments().getString(ARG_NAME);
         mPageNumber = getArguments().getInt(ARG_PAGE);
     }
@@ -96,7 +106,16 @@ public class ScreenSlidePageFragment extends Fragment {
     /**
      * Returns the page number represented by this fragment object.
      */
-//    public int getPageNumber() {
-//        return mPageNumber;
-//    }
+    public int getPageNumber() {
+        return mPageNumber;
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity().getActionBar() != null) {
+            getActivity().getActionBar().setTitle(title);
+        }
+    }
 }

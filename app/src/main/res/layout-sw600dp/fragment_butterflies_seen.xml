@@ -31,6 +31,7 @@
             android:inputType="text"
             android:paddingBottom="14dp"
             android:paddingRight="20dp"
+            android:paddingLeft="20dp"
             android:paddingTop="14dp" >
 
         </EditText>
@@ -47,9 +48,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="7dp"
-            android:background="#007CB2"
+            android:background="@color/seen_list_bg"
             android:paddingBottom="6dp"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingTop="6dp"
             android:text="@string/butterflies_seen_title"
             android:textColor="#ffffff"

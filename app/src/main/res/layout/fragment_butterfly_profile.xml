@@ -40,7 +40,7 @@
                     android:layout_marginLeft="10dp"
                     android:textIsSelectable="false"
                     android:textColor="@color/text"
-                    android:textSize="28sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -50,7 +50,7 @@
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/text"
                     android:textIsSelectable="false"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:textStyle="italic" />
 
             </LinearLayout>
@@ -85,54 +85,91 @@
 
         </LinearLayout>
 
+
+
+
         <!--Main Text-->
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/description_sub_head" />
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/description" />
 
+
+
+
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/habitat_sub_head" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/habitat" />
 
+
+
+
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/food_plant_sub_head" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/food_plant" />
 
+
+
+
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/distribution_sub_head" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/distribution" />
 
+
+
+
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/flight_period_sub_head" />
+
+        <View
+            style="@style/profile_sub_head_line_below" />
 
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/flight_period" />
 
+
+
+
         <TextView
             style="@style/profile_sub_head"
             android:text="@string/wingspan_sub_head" />
 
+        <View
+            style="@style/profile_sub_head_line_below" />
+
         <TextView
             style="@style/profile_body_text"
             android:id="@+id/wingspan" />
+
+
 
         <TextView
             android:id="@+id/div_bar_4"

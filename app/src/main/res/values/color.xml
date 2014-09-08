@@ -10,9 +10,9 @@
     <color name="counter_text_color">#c5c4c4</color>
     <color name="home_title_background">#3d3c3a</color>
     <color name="home_buttons_background">#1c54b8</color>
-    <color name="home_button_butterflies">#e29337</color>
-    <color name="wish_list_bg">#A2BC13</color>
-    <color name="seen_list_bg">#007CB2</color>
+    <color name="home_button_butterflies">#00ad5a</color>
+    <color name="wish_list_bg">#69a2b2</color>
+    <color name="seen_list_bg">#B27969</color>
     <color name="text">#3d3d3d</color>
     <color name="black">#000000</color>
 </resources>

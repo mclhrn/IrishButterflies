@@ -31,6 +31,7 @@
             android:hint="@string/search_list"
             android:inputType="text"
             android:paddingBottom="14dp"
+            android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="14dp" >
         </EditText>
@@ -46,9 +47,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="7dp"
-            android:background="#e19132"
+            android:background="@color/home_button_butterflies"
             android:paddingBottom="6dp"
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:paddingTop="6dp"
             android:text="@string/ref_guide_title"
             android:textColor="#ffffff"

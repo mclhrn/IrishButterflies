@@ -65,13 +65,20 @@ public class ButterflyProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+
+        if (null != savedInstanceState) {
+            Bundle args = getArguments();
+            args.putParcelable("butterfly", savedInstanceState.getParcelable("butterfly"));
+            args.putInt("bgColor", savedInstanceState.getInt("bgColor"));
+        }
+
+//        if (getArguments() != null) {
             butterfly = getArguments().getParcelable("butterfly");
             bgColor = getArguments().getInt("bgColor");
+//        }
 
-            datasource = new ButterflyDataSource(getActivity());
-            datasource.open();
-        }
+        datasource = new ButterflyDataSource(getActivity());
+        datasource.open();
     }
 
 
@@ -85,6 +92,15 @@ public class ButterflyProfileFragment extends Fragment {
         refreshDisplay();
         return v;
     }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle savedState) {
+        super.onSaveInstanceState(savedState);
+        savedState.putParcelable("butterfly", butterfly);
+        savedState.putInt("bgColor", bgColor);
+    }
+
 
 
     public void updateContent(Butterfly mButterfly, int bgColor) {
@@ -151,7 +167,7 @@ public class ButterflyProfileFragment extends Fragment {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onSlideshowSelected(butterfly.getImageLarge());
+                mListener.onSlideshowSelected(butterfly.getImageLarge(), butterfly.getName());
             }
         });
 
@@ -284,6 +300,6 @@ public class ButterflyProfileFragment extends Fragment {
      */
     public interface OnSlideshowSelectedListener {
         // TODO: Update argument type and name
-        public void onSlideshowSelected(String selection);
+        public void onSlideshowSelected(String selection, String name);
     }
 }

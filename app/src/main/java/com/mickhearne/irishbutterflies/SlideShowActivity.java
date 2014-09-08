@@ -23,6 +23,7 @@ public class SlideShowActivity extends FragmentActivity {
 
     private int NUM_PAGES = 1;
     private String name;
+    private String title;
 
 
     @Override
@@ -32,6 +33,7 @@ public class SlideShowActivity extends FragmentActivity {
 
         Bundle b = getIntent().getExtras();
         name = b.getString("name");
+        title = b.getString("title");
 
         try {
             getNumberofScreens();
@@ -83,7 +85,7 @@ public class SlideShowActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return ScreenSlidePageFragment.newInstance(name, position);
+            return ScreenSlidePageFragment.newInstance(name, position, title);
         }
 
         @Override
