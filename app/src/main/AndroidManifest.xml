@@ -53,7 +53,7 @@
         <activity
             android:name=".SlideShowActivity"
             android:label="@string/title_activity_slide_show" >
-            <meta-data
+        <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mickhearne.irishbutterflies.ProfileActivty" />
         </activity>

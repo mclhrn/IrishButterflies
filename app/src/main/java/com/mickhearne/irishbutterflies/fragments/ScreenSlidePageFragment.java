@@ -24,21 +24,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.mickhearne.irishbutterflies.MainActivity;
 import com.mickhearne.irishbutterflies.R;
 
-/**
- * A fragment representing a single step in a wizard. The fragment shows a dummy title indicating
- * the page number, along with some dummy text.
- */
+
 public class ScreenSlidePageFragment extends Fragment {
 
 
-    /**
-     * The argument key for the page number this fragment represents.
-     */
     public static final String ARG_TITLE = "title";
     public static final String ARG_PAGE = "page";
     public static final String ARG_NAME = "name";
+
 
     /**
      * The fragment's title, which is set to the argument value for {@link #ARG_TITLE}.
@@ -57,18 +53,22 @@ public class ScreenSlidePageFragment extends Fragment {
      */
     private int mPageNumber;
 
+
     /**
      * Factory method for this fragment class. Constructs a new fragment for the given page number.
      */
-    public static ScreenSlidePageFragment newInstance(String imageName, int position, String title) {
-        ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
+    public static Fragment newInstance(String imageName, int position, String title) {
+        Fragment fragment = new ScreenSlidePageFragment();
+
         Bundle args = new Bundle();
         args.putString(ARG_NAME, imageName);
         args.putString(ARG_TITLE, title);
         args.putInt(ARG_PAGE, position);
+
         fragment.setArguments(args);
         return fragment;
     }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,13 +81,9 @@ public class ScreenSlidePageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout containing a title and body text.
 
         ViewGroup rootView = (ViewGroup) inflater
-                .inflate(com.mickhearne.irishbutterflies.R.layout.fragment_screen_slide_page, container, false);
-
-        // Set the title view to show the page number.
-//        ((TextView) rootView.findViewById(android.R.id.text1)).setText("Test" + mPageNumber + 1);
+                .inflate(R.layout.fragment_screen_slide_page, container, false);
 
         ImageView imageView = (ImageView) rootView.findViewById(R.id.slide_show_image);
 
@@ -97,17 +93,7 @@ public class ScreenSlidePageFragment extends Fragment {
             imageView.setImageResource(imageResource);
         }
 
-        Log.i("butterfly", "should be an image of " + name);
-
         return rootView;
-    }
-
-
-    /**
-     * Returns the page number represented by this fragment object.
-     */
-    public int getPageNumber() {
-        return mPageNumber;
     }
 
 

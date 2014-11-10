@@ -16,7 +16,7 @@ import java.util.List;
 public class JSONPullParser {
 
 
-	private List<Butterfly> birds = new ArrayList<Butterfly>();
+	private List<Butterfly> butterflies = new ArrayList<Butterfly>();
 
 
 	public List<Butterfly> parseJSON(Context context) throws JSONException, IOException {
@@ -26,23 +26,23 @@ public class JSONPullParser {
 
         for (int i = 0; i < mArray.length(); i++) {
 
-            Butterfly bird = new Butterfly();
+            Butterfly butterfly = new Butterfly();
 
-            bird.setName(mArray.getJSONObject(i).getString("name"));
-            bird.setLatinName(mArray.getJSONObject(i).getString("latin"));
-            bird.setDescription(mArray.getJSONObject(i).getString("description"));
-            bird.setHabitat(mArray.getJSONObject(i).getString("habitat"));
-            bird.setFoodplant(mArray.getJSONObject(i).getString("foodplant"));
-            bird.setDistribution(mArray.getJSONObject(i).getString("distribution"));
-            bird.setFlightPeriod(mArray.getJSONObject(i).getString("flight_period"));
-            bird.setWingspan(mArray.getJSONObject(i).getString("wingspan"));
-            bird.setImageLarge(mArray.getJSONObject(i).getString("image_large"));
-            bird.setImageThumb(mArray.getJSONObject(i).getString("image_thumb"));
+            butterfly.setName(mArray.getJSONObject(i).getString("name"));
+            butterfly.setLatinName(mArray.getJSONObject(i).getString("latin"));
+            butterfly.setDescription(mArray.getJSONObject(i).getString("description"));
+            butterfly.setHabitat(mArray.getJSONObject(i).getString("habitat"));
+            butterfly.setFoodplant(mArray.getJSONObject(i).getString("foodplant"));
+            butterfly.setDistribution(mArray.getJSONObject(i).getString("distribution"));
+            butterfly.setFlightPeriod(mArray.getJSONObject(i).getString("flight_period"));
+            butterfly.setWingspan(mArray.getJSONObject(i).getString("wingspan"));
+            butterfly.setImageLarge(mArray.getJSONObject(i).getString("image_large"));
+            butterfly.setImageThumb(mArray.getJSONObject(i).getString("image_thumb"));
 
-            birds.add(bird);
+            butterflies.add(butterfly);
         }
 
-	return birds;
+	return butterflies;
 	}
 
 

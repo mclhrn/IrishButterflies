@@ -16,14 +16,16 @@ import com.mickhearne.irishbutterflies.utilities.AnalyticsData;
  */
 public class FeedbackFragment extends DialogFragment {
 
-    /**
-     * Create a new instance of FeedbackFragment, providing "num"
-     * as an argument.
-     */
 
-
-    public static FeedbackFragment newInstance() {
+    public static FeedbackFragment newInstance(int title, int message, int positive, int negative, int icon) {
         FeedbackFragment f = new FeedbackFragment();
+        Bundle args = new Bundle();
+        args.putInt("title", title);
+        args.putInt("message", message);
+        args.putInt("positive", positive);
+        args.putInt("negative", negative);
+        args.putInt("icon", icon);
+        f.setArguments(args);
         return f;
     }
 
@@ -40,16 +42,23 @@ public class FeedbackFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
+        int title = getArguments().getInt("title");
+        int message = getArguments().getInt("message");
+        int positive = getArguments().getInt("positive");
+        int negative = getArguments().getInt("negative");
+        int icon = getArguments().getInt("icon");
+
         return new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.dialog_title)
-                .setMessage(R.string.dialog_text)
-                .setPositiveButton(R.string.dialog_positive,
+                .setTitle(title)
+                .setIcon(icon)
+                .setMessage(message)
+                .setPositiveButton(positive,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 mListener.onPositiveClick();
                             }
                         })
-                .setNegativeButton(R.string.dialog_negative,
+                .setNegativeButton(negative,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 mListener.onNegativeClick();

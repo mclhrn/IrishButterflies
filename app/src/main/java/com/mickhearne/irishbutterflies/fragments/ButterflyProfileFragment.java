@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,8 +11,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mickhearne.irishbutterflies.HomeActivity;
@@ -39,7 +36,6 @@ public class ButterflyProfileFragment extends Fragment {
     boolean isSeen, isWish;
     private OnSlideshowSelectedListener mListener;
     private int bgColor;
-    private LinearLayout ll;
 
 
     public static ButterflyProfileFragment newInstance() {
@@ -72,10 +68,8 @@ public class ButterflyProfileFragment extends Fragment {
             args.putInt("bgColor", savedInstanceState.getInt("bgColor"));
         }
 
-//        if (getArguments() != null) {
-            butterfly = getArguments().getParcelable("butterfly");
-            bgColor = getArguments().getInt("bgColor");
-//        }
+        butterfly = getArguments().getParcelable("butterfly");
+        bgColor = getArguments().getInt("bgColor");
 
         datasource = new ButterflyDataSource(getActivity());
         datasource.open();
@@ -167,12 +161,9 @@ public class ButterflyProfileFragment extends Fragment {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.onSlideshowSelected(butterfly.getImageLarge(), butterfly.getName());
+                mListener.onSlideShowSelected(butterfly.getImageLarge(), butterfly.getName());
             }
         });
-
-        Log.i(ButterfliesFragment.LOGTAG, "IMAGE NAME + " + butterfly.getImageLarge());
-
     }
 
 
@@ -299,7 +290,6 @@ public class ButterflyProfileFragment extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnSlideshowSelectedListener {
-        // TODO: Update argument type and name
-        public void onSlideshowSelected(String selection, String name);
+        public void onSlideShowSelected(String selection, String name);
     }
 }

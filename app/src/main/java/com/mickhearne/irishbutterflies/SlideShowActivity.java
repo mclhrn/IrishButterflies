@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.mickhearne.irishbutterflies.fragments.ScreenSlidePageFragment;
 
+import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class SlideShowActivity extends FragmentActivity {
         title = b.getString("title");
 
         try {
-            getNumberofScreens();
+            getNumberOfScreens();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
@@ -61,7 +62,7 @@ public class SlideShowActivity extends FragmentActivity {
     }
 
 
-    private void getNumberofScreens() throws IllegalAccessException {
+    private void getNumberOfScreens() throws IllegalAccessException {
         Field[] fields = R.drawable.class.getFields();
         List<Integer> drawables = new ArrayList<Integer>();
         for (Field field : fields) {
@@ -74,8 +75,7 @@ public class SlideShowActivity extends FragmentActivity {
 
 
     /**
-     * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
-     * sequence.
+     * A simple pager adapter
      */
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
 
@@ -90,7 +90,7 @@ public class SlideShowActivity extends FragmentActivity {
 
         @Override
         public int getCount() {
-            return NUM_PAGES;
+            return NUM_PAGES-1;
         }
     }
 
@@ -98,43 +98,41 @@ public class SlideShowActivity extends FragmentActivity {
     // Zoom-out page transformer
     public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
 
-
-        private static final float MIN_SCALE = 0.85f;
-        private static final float MIN_ALPHA = 0.5f;
-
+        private static final float MIN_SCALE = 0.75f;
 
         public void transformPage(View view, float position) {
+
             int pageWidth = view.getWidth();
-            int pageHeight = view.getHeight();
 
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left.
                 view.setAlpha(0);
 
-            } else if (position <= 1) { // [-1,1]
-                // Modify the default slide transition to shrink the page as well
-                float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
-                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
-                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
-                if (position < 0) {
-                    view.setTranslationX(horzMargin - vertMargin / 2);
-                } else {
-                    view.setTranslationX(-horzMargin + vertMargin / 2);
-                }
+            } else if (position <= 0) { // [-1,0]
+                // Use the default slide transition when moving to the left page
+                view.setAlpha(1);
+                view.setTranslationX(0);
+                view.setScaleX(1);
+                view.setScaleY(1);
+
+            } else if (position <= 1) { // (0,1]
+                // Fade the page out.
+                view.setAlpha(1 - position);
+
+                // Counteract the default slide transition
+                view.setTranslationX(pageWidth * -position);
 
                 // Scale the page down (between MIN_SCALE and 1)
+                float scaleFactor = MIN_SCALE
+                        + (1 - MIN_SCALE) * (1 - Math.abs(position));
                 view.setScaleX(scaleFactor);
                 view.setScaleY(scaleFactor);
-
-                // Fade the page relative to its size.
-                view.setAlpha(MIN_ALPHA +
-                        (scaleFactor - MIN_SCALE) /
-                                (1 - MIN_SCALE) * (1 - MIN_ALPHA));
 
             } else { // (1,+Infinity]
                 // This page is way off-screen to the right.
                 view.setAlpha(0);
             }
         }
+
     }
 }

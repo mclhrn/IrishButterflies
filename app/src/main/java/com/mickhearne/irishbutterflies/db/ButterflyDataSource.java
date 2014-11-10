@@ -106,9 +106,9 @@ public class ButterflyDataSource {
 		Log.i(LOGTAG, "There are " + cursor.getColumnCount()
                 + " columns in the ButterfliesFragment table.");
 
-		List<Butterfly> butterflies = cursorToList(cursor);
+//		List<Butterfly> butterflies = cursorToList(cursor);
 
-		return butterflies;
+		return cursorToList(cursor);
 	}
 
 	// toggle output of reference guide

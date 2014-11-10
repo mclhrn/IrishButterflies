@@ -49,7 +49,7 @@ public class MyApplication extends Application {
     static HashMap<TrackerName, Tracker> mTrackers = new HashMap<TrackerName, Tracker>();
 
 
-    private static final String PROPERTY_ID = "UA-50547496-1";
+    private static final String PROPERTY_ID = "UA-54811387-1";
 
 
     public static Tracker getTracker(TrackerName trackerId) {

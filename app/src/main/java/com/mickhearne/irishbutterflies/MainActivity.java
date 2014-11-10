@@ -32,9 +32,7 @@ public class MainActivity extends FragmentActivity
         ButterflyWishlistFragment.OnButterflyWishSelectedListener,
         FeedbackFragment.DialogClickListener {
 
-    /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
-     */
+    public static final String LOGTAG = "Butterfly LOGTAG";
     private CharSequence mTitle;
     private static Context context = MyApplication.getAppContext();
     private static Intent instance = null;
@@ -189,7 +187,11 @@ public class MainActivity extends FragmentActivity
      */
     // Display feedback dialog
     void showDialog() {
-        DialogFragment newFragment = FeedbackFragment.newInstance();
+        DialogFragment newFragment = FeedbackFragment.newInstance(R.string.dialog_title,
+                R.string.dialog_text,
+                R.string.dialog_positive,
+                R.string.dialog_negative,
+                R.drawable.ic_launcher);
         newFragment.show(getFragmentManager(), "dialog");
     }
 

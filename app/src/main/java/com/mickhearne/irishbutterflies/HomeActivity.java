@@ -1,17 +1,23 @@
 package com.mickhearne.irishbutterflies;
 
 import android.app.Activity;
+import android.app.DialogFragment;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.mickhearne.irishbutterflies.db.ButterflyDataSource;
+import com.mickhearne.irishbutterflies.fragments.FeedbackFragment;
 import com.mickhearne.irishbutterflies.model.Butterfly;
 import com.mickhearne.irishbutterflies.utilities.AnalyticsData;
 import com.mickhearne.irishbutterflies.utilities.Const;
@@ -113,21 +119,25 @@ public class HomeActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.butterfly_icon:
                 mIntent.putExtra("fragmentNumber", 0);
+                startActivity(mIntent);
                 break;
             case R.id.butterfly_seen_icon:
                 mIntent.putExtra("fragmentNumber", 1);
+                startActivity(mIntent);
                 break;
             case R.id.butterfly_wish_icon:
                 mIntent.putExtra("fragmentNumber", 2);
+                startActivity(mIntent);
                 break;
             case R.id.map_icon:
                 mIntent = new Intent(this, MapsActivity.class);
+                startActivity(mIntent);
                 break;
             default:
                 break;
         }
-        startActivity(mIntent);
     }
+
 
 
     private class GetData extends AsyncTask<Void, Void, Void> {
