@@ -7,15 +7,11 @@ import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
-import android.view.Display;
-import android.view.View;
 
-import com.mickhearne.irishbutterflies.fragments.ButterflyProfileFragment;
 import com.mickhearne.irishbutterflies.fragments.ButterfliesFragment;
 import com.mickhearne.irishbutterflies.fragments.ButterfliesSeenFragment;
 import com.mickhearne.irishbutterflies.fragments.ButterflyWishlistFragment;

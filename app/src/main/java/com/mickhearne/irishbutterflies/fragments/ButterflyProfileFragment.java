@@ -175,8 +175,13 @@ public class ButterflyProfileFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.profile, menu);
 
+//        if (menu.hasVisibleItems()) {
+//            menu.clear();
+//        }
 
         // Show delete menu item if we came from Butterflies Seen or Wish
         menu.findItem(R.id.delete_from_seen).setVisible(isSeen);
@@ -188,7 +193,6 @@ public class ButterflyProfileFragment extends Fragment {
 
         // Share Sighting
         menu.findItem(R.id.share_sighting).setVisible(true);
-        super.onCreateOptionsMenu(menu, inflater);
     }
 
 

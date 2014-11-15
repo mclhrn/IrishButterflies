@@ -62,7 +62,7 @@ public class MyApplication extends Application {
 
             // When dry run is set, hits will not be dispatched, but will still be logged as
             // though they were dispatched.
-            analytics.setDryRun(true);
+//            analytics.setDryRun(true);
 
             Tracker t = (trackerId == TrackerName.APP_TRACKER) ? analytics.newTracker(PROPERTY_ID)
                     : (trackerId == TrackerName.GLOBAL_TRACKER) ? analytics.newTracker(R.xml.global_tracker)

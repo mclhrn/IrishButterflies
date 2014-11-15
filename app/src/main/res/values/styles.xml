@@ -5,7 +5,6 @@
         <!-- Customize your theme here. -->
 
         <!--<item name="android:homeAsUpIndicator">@drawable/my_up_indicator</item>-->
-
     </style>
 
     <style name="profile_sub_head">
